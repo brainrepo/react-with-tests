@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar/> can match the snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Fourviere
+    </h1>
+    <ul>
+      <li>
+        <a
+          alt=""
+          href="/"
+        >
+          Podcasts
+        </a>
+      </li>
+      <li>
+        <a
+          alt=""
+          href="/configurations"
+        >
+          Configurations
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
