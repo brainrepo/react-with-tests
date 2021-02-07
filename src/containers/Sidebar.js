@@ -1,15 +1,23 @@
-import {Link} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
+import Logo from "../components/Logo";
+import styles from "./Sidebar.module.css";
 
 function Sidebar() {
   return (
-    <div>
-      <h1>Fourviere</h1>
-      <ul>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <Logo />
+      </div>
+      <ul className={styles.links}>
         <li>
-            <Link to="/" alt="">Podcasts</Link>
+          <NavLink to="/" alt="" activeClassName='active'>
+            Podcasts
+          </NavLink>
         </li>
         <li>
-            <Link to="/configurations" alt="">Configurations</Link>
+          <NavLink to="/configurations" alt="" exact={true} activeClassName={styles.active}>
+            Configurations
+          </NavLink>
         </li>
       </ul>
     </div>

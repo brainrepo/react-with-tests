@@ -2,6 +2,8 @@ import Input from "../components/form/Input";
 import TextArea from "../components/form/TextArea";
 import useForm from "../hooks/useForm";
 
+import styles from "./Configurations.module.css"
+
 const validate = (data) => {
   const errors = {};
   if (!data.hasOwnProperty("title") || data.title === "") {
