@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../components/Logo";
 import styles from "./Sidebar.module.css";
+import {useI18nState} from "../contexts/i18nContext";
 
 function Sidebar() {
+  const lang = useI18nState();
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -10,13 +12,13 @@ function Sidebar() {
       </div>
       <ul className={styles.links}>
         <li>
-          <NavLink to="/" alt="" activeClassName='active'>
-            Podcasts
+          <NavLink to="/" alt="" activeClassName={styles.active} exact={true} >
+            {lang['menu.podcasts']}
           </NavLink>
         </li>
         <li>
           <NavLink to="/configurations" alt="" exact={true} activeClassName={styles.active}>
-            Configurations
+          {lang['menu.configurations']}
           </NavLink>
         </li>
       </ul>

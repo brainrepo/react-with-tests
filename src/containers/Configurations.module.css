@@ -1,0 +1,12 @@
+.container{
+    background-color: #F2F6FC;
+    box-shadow: inset 0px 0px 10px 0px rgba(54,65,82,0.08);
+    padding:25px;
+    width: 82%;
+}
+.container h1{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0;
+    margin:0;
+}

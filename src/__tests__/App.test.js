@@ -1,17 +1,26 @@
-import { fireEvent, render, screen, waitFor, cleanup} from "@testing-library/react";
+import {
+  fireEvent,
+  render,
+  screen,
+  waitFor,
+  cleanup,
+} from "@testing-library/react";
 import App from "../App";
 import { createMemoryHistory } from "history";
 import { Router } from "react-router-dom";
+import {I18nContextProvider} from "../contexts/i18nContext"
 
-let renderResult = null
+let renderResult = null;
 let history = null;
 
 beforeEach(() => {
   history = createMemoryHistory();
   renderResult = render(
-    <Router history={history}>
-      <App />
-    </Router>
+    <I18nContextProvider>
+      <Router history={history}>
+        <App />
+      </Router>
+    </I18nContextProvider>
   );
 });
 
@@ -29,4 +38,3 @@ describe("<App/>", () => {
     expect(getByText("Configuration area")).toBeVisible();
   });
 });
-
