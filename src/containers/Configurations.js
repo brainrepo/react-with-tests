@@ -30,7 +30,7 @@ const Configurations = () => {
   });
 
   return (
-    <form onSubmit={_onSubmit}>
+    <form onSubmit={_onSubmit} className={styles.container}>
       <h1>Configuration area</h1>
 
       <fieldset>

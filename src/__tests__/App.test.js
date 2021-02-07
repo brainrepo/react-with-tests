@@ -18,10 +18,6 @@ beforeEach(() => {
 afterEach(cleanup);
 
 describe("<App/>", () => {
-  it("can be loaded", () => {
-    const app = screen.getByText("Fourviere");
-    expect(app).toBeVisible();
-  });
   it("can match the snapshot", () => {
     expect(renderResult.asFragment()).toMatchSnapshot();
   });

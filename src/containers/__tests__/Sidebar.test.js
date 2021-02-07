@@ -9,8 +9,10 @@ describe("<Sidebar/>", () => {
         <Sidebar />
       </Router>
     );
-    const sidebar = screen.getByText("Fourviere");
-    expect(sidebar).toBeVisible();
+    const podcasts = screen.getByText("Podcasts");
+    expect(podcasts).toBeVisible();
+    const configurations = screen.getByText("Configurations");
+    expect(configurations).toBeVisible();
   });
   it("can match the snapshot", () => {
     const fragment = render(
