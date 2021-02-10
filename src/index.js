@@ -4,15 +4,19 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
-import {I18nContextProvider} from "./contexts/i18nContext"
+import {I18nContextProvider} from "./contexts/i18nContext";
+import { ReduxProvider } from "./redux/Store"
 
 ReactDOM.render(
   <React.StrictMode>
+    <ReduxProvider>
     <I18nContextProvider>
       <Router>
         <App />
       </Router>
     </I18nContextProvider>
+    </ReduxProvider>
+
   </React.StrictMode>,
   document.getElementById("root")
 );

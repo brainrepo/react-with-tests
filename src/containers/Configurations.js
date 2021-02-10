@@ -1,8 +1,12 @@
 import Input from "../components/form/Input";
 import TextArea from "../components/form/TextArea";
 import useForm from "../hooks/useForm";
+import AddLanguage from "./AddLanguage";
+import RemoveLanguage from './RemoveLanguage';
 
 import styles from "./Configurations.module.css"
+import ShowLanguage from "./ShowLanguage";
+import AddClassLanguage from "./AddClassLanguage";
 
 const validate = (data) => {
   const errors = {};
@@ -34,6 +38,8 @@ const Configurations = () => {
       <h1>Configuration area</h1>
 
       <fieldset>
+        <AddLanguage /><RemoveLanguage />
+        <ShowLanguage /> <AddClassLanguage />
         <Input
           name="title"
           label="Title"
